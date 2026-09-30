@@ -80,6 +80,8 @@ img{display:block;max-width:100%}
 .project-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;min-height:310px;transition:.25s}
 .project-card h3{font-family:"Playfair Display";font-size:1.55rem;color:var(--wine);margin:38px 0 10px}
 .project-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.project-link{display:inline-flex;align-items:center;margin-top:20px;color:var(--orange);font-weight:700;font-size:.9rem;border-bottom:1px solid transparent;transition:.2s}
+.project-link:hover{color:var(--wine);border-bottom-color:var(--wine)}
 .education-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
 .education-list{display:grid;gap:16px}
 .education-card{padding:28px;border-left:4px solid var(--orange);background:var(--cream);transition:.25s}
