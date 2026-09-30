@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://deborahgbem.webtechclass.com/sitemap.xml
