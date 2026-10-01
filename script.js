@@ -14,22 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  const socialMenu = document.querySelector('.floating-social');
-  const socialToggle = document.querySelector('.social-toggle');
+  const scrollTop = document.querySelector('.scroll-top');
+  const updateScrollButton = () => {
+    scrollTop?.classList.toggle('visible', window.scrollY > 400);
+  };
+  updateScrollButton();
+  window.addEventListener('scroll', updateScrollButton, { passive: true });
 
-  socialToggle?.addEventListener('click', (event) => {
-    event.stopPropagation();
-    const open = socialMenu.classList.toggle('open');
-    socialToggle.setAttribute('aria-expanded', String(open));
-    socialToggle.querySelector('.social-toggle-icon').textContent = open ? '×' : '☰';
-  });
-
-  document.addEventListener('click', (event) => {
-    if (socialMenu && !socialMenu.contains(event.target)) {
-      socialMenu.classList.remove('open');
-      socialToggle?.setAttribute('aria-expanded', 'false');
-      const icon = socialToggle?.querySelector('.social-toggle-icon');
-      if (icon) icon.textContent = '☰';
-    }
+  scrollTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
