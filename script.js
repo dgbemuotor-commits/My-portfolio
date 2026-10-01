@@ -11,3 +11,19 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+const socialMenu = document.querySelector('.floating-social');
+const socialToggle = document.querySelector('.social-toggle');
+
+socialToggle?.addEventListener('click', () => {
+  const open = socialMenu.classList.toggle('open');
+  socialToggle.setAttribute('aria-expanded', String(open));
+});
+
+document.addEventListener('click', (event) => {
+  if (socialMenu && !socialMenu.contains(event.target)) {
+    socialMenu.classList.remove('open');
+    socialToggle?.setAttribute('aria-expanded', 'false');
+  }
+});
