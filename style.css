@@ -201,34 +201,31 @@ body{background:var(--cream);color:var(--ink)}
   align-items:flex-end;
   justify-content:center;
 }
-.photo-frame.template-portrait{
-  width:min(520px,100%);
-  height:650px;
-  aspect-ratio:auto;
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  z-index:2;
+.photo-frame.template-portrait {
+  width: min(520px, 100%);
+  height: 650px;
+  aspect-ratio: auto;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
 }
-.template-portrait:before{
-  content:"";
-  position:absolute;
-  width:390px;height:520px;
-  right:45px;bottom:25px;
-  border:1px solid rgba(100,27,53,.25);
-  border-radius:220px 220px 0 0;
-  z-index:-1;
+
+.template-portrait:before {
+  display: none; /* Removes the thin arch line behind the photo */
 }
-.template-portrait img{
-  width:auto;
-  height:100%;
-  max-width:100%;
-  object-fit:contain;
-  border-radius:0;
-  box-shadow:none;
-  mix-blend-mode:multiply;
-  filter:saturate(.98);
+
+.template-portrait img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  filter: saturate(.98);
 }
 .portrait-orbit{position:absolute;border-radius:50%;z-index:-2}
 .orbit-one{width:110px;height:110px;background:var(--orange);right:15px;top:85px;opacity:.9}
