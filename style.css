@@ -379,3 +379,81 @@ body{background:var(--cream);color:var(--ink)}
   .social-icon{width:38px !important;height:38px !important}
   .scroll-top{right:14px;bottom:24px;width:44px;height:44px}
 }
+
+
+/* FINAL FIX: social menu stays fixed and is level with the scroll-up button */
+.floating-social{
+  position:fixed !important;
+  left:24px !important;
+  right:auto !important;
+  bottom:24px !important;
+  width:48px !important;
+  height:48px !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:block !important;
+  z-index:10000 !important;
+  transform:none !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+.social-toggle{
+  position:absolute !important;
+  left:0 !important;
+  bottom:0 !important;
+  width:48px !important;
+  height:48px !important;
+  margin:0 !important;
+  padding:0 !important;
+  z-index:2 !important;
+}
+.social-links{
+  position:absolute !important;
+  left:0 !important;
+  bottom:58px !important;
+  width:max-content !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  gap:9px !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+  transform:translateY(8px) !important;
+  pointer-events:none !important;
+}
+.floating-social.open .social-links{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:translateY(0) !important;
+  pointer-events:auto !important;
+}
+.scroll-top{
+  right:24px !important;
+  bottom:24px !important;
+  z-index:9999 !important;
+}
+@media(max-width:560px){
+  .floating-social{
+    left:14px !important;
+    right:auto !important;
+    bottom:24px !important;
+    width:44px !important;
+    height:44px !important;
+  }
+  .social-toggle{
+    width:44px !important;
+    height:44px !important;
+  }
+  .social-links{
+    left:0 !important;
+    bottom:54px !important;
+  }
+  .scroll-top{
+    right:14px !important;
+    bottom:24px !important;
+    width:44px !important;
+    height:44px !important;
+  }
+}
