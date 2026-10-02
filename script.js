@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => links.classList.remove('open'));
   });
 
+  const socialMenu = document.querySelector('.floating-social');
+  const socialToggle = document.querySelector('.social-toggle');
+  socialToggle?.addEventListener('click', () => {
+    const open = socialMenu?.classList.toggle('open') ?? false;
+    socialToggle.setAttribute('aria-expanded', String(open));
+    socialToggle.setAttribute('aria-label', open ? 'Close social media menu' : 'Open social media menu');
+  });
+
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
