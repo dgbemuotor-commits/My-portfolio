@@ -558,3 +558,65 @@ body{background:var(--cream);color:var(--ink)}
     height:48px !important;
   }
 }
+
+
+/* BULLETPROOF SOCIAL BUTTON FIX */
+.floating-social{
+  position:static !important;
+  width:0 !important;
+  height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  overflow:visible !important;
+  pointer-events:none !important;
+}
+.floating-social .social-toggle{
+  position:fixed !important;
+  left:24px !important;
+  bottom:24px !important;
+  top:auto !important;
+  right:auto !important;
+  width:52px !important;
+  height:52px !important;
+  min-width:52px !important;
+  min-height:52px !important;
+  display:grid !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+  z-index:2147483647 !important;
+}
+.floating-social .social-links{
+  position:fixed !important;
+  left:24px !important;
+  bottom:86px !important;
+  top:auto !important;
+  width:max-content !important;
+  display:flex !important;
+  visibility:hidden !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  z-index:2147483646 !important;
+}
+.floating-social.open .social-links{
+  visibility:visible !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+}
+@media(max-width:560px){
+  .floating-social .social-toggle{
+    left:14px !important;
+    bottom:24px !important;
+    width:48px !important;
+    height:48px !important;
+    min-width:48px !important;
+    min-height:48px !important;
+  }
+  .floating-social .social-links{
+    left:14px !important;
+    bottom:82px !important;
+  }
+}
