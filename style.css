@@ -620,3 +620,16 @@ body{background:var(--cream);color:var(--ink)}
     bottom:82px !important;
   }
 }
+
+
+/* Refine hero heading size */
+.hero-copy h1{
+  font-size:clamp(2.5rem,4.8vw,4.5rem) !important;
+  line-height:1 !important;
+  margin:18px 0 24px !important;
+}
+@media(max-width:560px){
+  .hero-copy h1{
+    font-size:clamp(2.3rem,11vw,3.3rem) !important;
+  }
+}
